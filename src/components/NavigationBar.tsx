@@ -10,10 +10,10 @@ const NavigationBar = () => {
 
             {/* Center Links */}
             <ul className="flex space-x-8">
-                <li>About</li>
-                <li>Projects</li>
-                <li>Experiences</li>
-                <li>Contact</li>
+                <a href="#about"><li>About</li></a>
+                <a href="#projects"><li>Projects</li></a>
+                <a href="#experiences"><li>Experiences</li></a>
+                <a href="#contact"><li>Contact</li></a>
             </ul>
 
             {/* Social Icons */}
