@@ -5,7 +5,6 @@ import P_WiNGHacks from "../assets/preview-winghacks.png"
 import P_Earthquake from "../assets/preview_Earthquake.png"
 import P_AnimalCare from "../assets/preview_animalcare.png"
 import P_YoutubeChannel from "../assets/preview_youtubechannel.png"
-import { desc, p } from "framer-motion/client"
 
 export const projects =[
     {
