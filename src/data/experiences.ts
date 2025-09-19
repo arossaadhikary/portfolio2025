@@ -41,6 +41,16 @@ export const experiences = {
     ],
     Leadership: [
     {
+        position: "Career Development Director",
+        company: "UF Women in Computer Science",
+        date: "Aug 2025 - Present",
+        bullets: [
+        "Facilitated a program for first-year women in engineering, focusing on developing leadership skills in the field.",
+        "Encouraged participants to take on leadership roles within student organizations, emphasizing the importance of hands-on experience.",
+        "Implemented regular feedback sessions to facilitate reflection on leadership growth and encourage continuous improvement."
+    ]
+    },
+    {
         position: "Teaching Assistant",
         company: "UF Honors Professional Development for Engineers",
         date: "Aug 2024 - Nov 2024",
@@ -55,9 +65,19 @@ export const experiences = {
         company: "UF Women in Computer Science",
         date: "Apr 2024 - Dec 2024",
         bullets: [
-        "Cultivated a vibrant community by orchestrating three monthly dynamic social events for 200+ members, creating an inclusive space that champions women in tech.",
-        "Forged impactful relationships by mentoring members and providing technical, professional, and social resources to support success in computer science."
+            "Leading organization's career development program, delivering tailored resume workshops & mentoring 200+ members via self-created internship preparation, application materials, & networking strategies",
+            "Organizing exploratory tech workshops (i.e. cloud, cybersecurity, blockchain) to broaden member exposure to fields beyond software engineering, expanding awareness of diverse career paths."
         ]
+    },
+    {
+    position: "Software Development Lead",
+    company: "UF Engineers Without Borders",
+    date: "Apr 2024 - Dec 2024",
+    bullets: [
+    "Led a 10-person team to deploy a centralized communication system connecting Peru and Nepal chapters, formalizing the merger of previously independent organizations.",
+    "Implemented responsive design principles using React and Figma, creating wireframes and developing a dynamic, user-friendly website to enhance accessibility across devices.",
+    "Built a Firebase authentication system to enable secure member, alumni, and applicant access, centralizing project updates and streamlining application tracking."
+    ]
     },
     {
         position: "Public Relations Director, External Affairs Ambassador",
@@ -71,43 +91,37 @@ export const experiences = {
     ],
     Professional: [
     {
+        position: "Wireless & Optical Networking Intern",
+        company: "Walt Disney World, Telecom Operations",
+        date: "May 2025 - Present",
+        bullets: [
+            "Automating IoT device configuration & deployment using Disney’s automation platform, TRON, & ArcGIS, enabling scalable rollout of sensors & improving internal equipment tracking (e.g. pest control, wheelchairs).",
+            "Spearheading migration of 1000+ Smartsheet assets to Airtable via Python scripting & Smartsheet/Airtable API, streamlining workflows for Telecom & eliminating costly effort.",
+            "Engineering the 1st scalable, centralized SharePoint-based backup system using Power Automate, reducing platform costs & enabling sustainable, department-wide adoption.",
+            "Designing Splunk IoT dashboards for occupancy & pest control data via The Things Network, improving workflows, promoting guest experience through sensor-driven intelligence & projecting to save Pest Control department $72k/yrly.",
+            "Performed RF surveys & WiFi spectrum analysis, optimizing coverage by identifying dead zones, supporting access point installations, & informing FCC frequency renewals."
+        ]
+    },
+    {
+        position: "SmartHQ Software Engineering Intern",
+        company: "General Electric Appliances",
+        date: "Jan 2025 - May 2025",
+        bullets: [
+            "Shaped UI/UX for new MySubscriptions SmartHQ Feature via Flutter, Kotlin, & Dart, leveraging Git for version control in an Agile team environment to expand & streamline app’s subscription management capabilities.",
+            "Independently developed & pitched a Figma proof of value to leadership for new SmartHQ features, driving exploration of advanced SmartHQ appliance integrations beyond core internship responsibilities.",
+            "Programmed motor & sensor drivers in embedded C & designed finite-state machine based control logic, achieving 100% test coverage with CppUTest, securing a 1st place finish in a multi-round robotics competition."
+        ]
+    },
+    {
         position: "Research Intern",
         company: "UF Department of Occupational Therapy",
-        date: "Aug 2024 – Present",
+        date: "Aug 2024 - Present",
         bullets: [
         "Integrated data from Qualisys and Visual3D to develop a Python script automating biomechanical calculations for gait analysis using pandas, NumPy, and SciPy, improving data accuracy and processing speed by 80%.",
         "Performed data analysis in Visual3D and Theia by identifying gait cycles and adding markers to track movement.",
         "Leveraged an AI-based markerless motion capture system to collect data on walker biomechanics (e.g., joint positioning)."
         ]
     },
-    {
-        position: "Google Cybersecurity Certification Program",
-        company: "Women in Cybersecurity",
-        date: "Jun 2024 – Present",
-        bullets: [
-        "Developing the ability to understand common risks, threats, and vulnerabilities alongside mitigation methodologies.",
-        "Learning to protect networks, devices, people, and data from unauthorized access and cyberattacks using SIEM tools and hands-on labs with Python, Linux, and SQL."
-        ]
-    },
-    {
-        position: "Software Development Lead",
-        company: "UF Engineers Without Borders",
-        date: "Apr 2024 – Present",
-        bullets: [
-        "Led a 10-person team to deploy a centralized communication system connecting Peru and Nepal chapters, formalizing the merger of previously independent organizations.",
-        "Implemented responsive design principles using React and Figma, creating wireframes and developing a dynamic, user-friendly website to enhance accessibility across devices.",
-        "Built a Firebase authentication system to enable secure member, alumni, and applicant access, centralizing project updates and streamlining application tracking."
-        ]
-    },
-    {
-        position: "Hackathon Website Developer",
-        company: "WiNGHacks Hackathon",
-        date: "Dec 2023 – Apr 2024",
-        bullets: [
-        "Selected as the sole first-year committee member to design the website for UF's first women- and nonbinary-focused hackathon.",
-        "Promoted interactivity with React by optimizing FAQ, sponsorship, and workshop schedule pages."
-        ]
-    }
 ]
 }
 

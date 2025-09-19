@@ -9,7 +9,7 @@ const NavigationBar = () => {
             <a href="/" className = "hover:text-blue-400 transition">@arossaadhikary</a>
 
             {/* Center Links */}
-            <ul className="flex space-x-8">
+            <ul className="flex space-x-8 text-xl">
                 <a href="#about"><li>About</li></a>
                 <a href="#projects"><li>Projects</li></a>
                 <a href="#experiences"><li>Experiences</li></a>

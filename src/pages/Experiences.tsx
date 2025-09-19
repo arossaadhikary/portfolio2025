@@ -1,6 +1,6 @@
 import { useState } from "react"
-import ExperiencesCard from "./ExperiencesCard"
 import { experiences } from "../data/experiences"
+import ExperiencesCard from "../../src/components/Experiences/ExperiencesCard"
 
 const categories = ["Professional", "Leadership", "Community"] as const
 

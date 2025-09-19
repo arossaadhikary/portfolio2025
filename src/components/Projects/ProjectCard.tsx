@@ -1,5 +1,6 @@
-import GitHub from '../assets/icon-github.png'
-import Output from "../assets/icon-output.png"
+import GitHub from '../../assets/icon-github.png'
+import Output from "../../assets/icon-output.png"
+import Skill from './SkillButton'
 
 type ProjectCardProps = {
     title: string;
@@ -7,9 +8,10 @@ type ProjectCardProps = {
     description: string;
     githubUrl?: string;
     projectUrl?: string;
+    skills: string[];
 }
 
-const ProjectCard = ({ title, image, description, githubUrl, projectUrl}: ProjectCardProps) => {
+const ProjectCard = ({ title, image, description, githubUrl, projectUrl, skills }: ProjectCardProps) => {
     return (
         <section>
             {/* Image */}
@@ -43,6 +45,15 @@ const ProjectCard = ({ title, image, description, githubUrl, projectUrl}: Projec
             <p className="text-left text-slate-300 leading-relaxed line-clamp-4">
                 {description}
             </p>
+
+            {/* Skills */}
+            {skills && skills.length > 0 && (
+                <div className = "flex flex-wrap gap-1 mt-4">
+                    {skills.map((s, i) => (
+                        <Skill key={i} skill={s} />
+                    ))}
+                </div>
+            )}
         </section>
     )
 }

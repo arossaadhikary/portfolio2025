@@ -1,10 +1,10 @@
 import './App.css'
-import NavigationBar from './components/NavigationBar'
-import Intro from './components/Intro'
-import About from './components/About'
-import Projects from './components/Projects'
-import Experiences from './components/Experiences'
-import Contact from './components/Contact'
+import NavigationBar from './pages/NavigationBar'
+import Intro from './pages/Intro'
+import About from './pages/About'
+import Projects from './pages/Projects'
+import Experiences from './pages/Experiences'
+import Contact from './pages/Contact'
 
 function App() {
   return (

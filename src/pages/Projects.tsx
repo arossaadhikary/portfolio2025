@@ -1,6 +1,6 @@
 import { useState } from "react"
 import { motion, AnimatePresence } from "framer-motion"
-import ProjectCard from "./ProjectCard"
+import ProjectCard from "../components/Projects/ProjectCard"
 import { projects } from "../data/projects"
 
 const Projects = () => {
@@ -22,7 +22,7 @@ const Projects = () => {
       <div className="my-10">
         <AnimatePresence mode="wait">
           <motion.div
-            key={currentPage} // 👈 re-renders on page change
+            key={currentPage}
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             exit={{ opacity: 0, y: -20 }}

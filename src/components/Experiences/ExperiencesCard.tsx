@@ -41,6 +41,7 @@ const ExperiencesCard = ({ position, company, date, bullets }: ExperienceCardPro
                 ))}
                 </ul>
             )}
+
         </li>       
     )
 }
