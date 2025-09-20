@@ -15,7 +15,7 @@ const ProjectCard = ({ title, image, description, githubUrl, projectUrl, skills 
     return (
         <section>
             {/* Image */}
-            <img src={image}></img>
+            <img src={image} className = "rounded-3xl"></img>
             
             {/* Grid Wraper for Title, GitHub & Output */}
             <div className="flex items-start justify-between my-4">

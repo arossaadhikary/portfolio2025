@@ -16,7 +16,7 @@ const Projects = () => {
   return (
     <div id="projects">
       <h2 className="flex justify-start text-white text-4xl font-bold mb-6">PROJECTS</h2>
-      <hr />
+      <hr className="mb-6 border-slate-700"></hr>
 
       {/* Projects Grid with animation */}
       <div className="my-10">

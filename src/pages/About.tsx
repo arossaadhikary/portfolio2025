@@ -4,7 +4,7 @@ const About = () => {
     return (
         <section id="about">
             <h2 className="flex justify-start mb-6 text-4xl font-bold text-white">ABOUT</h2>
-            <hr></hr>
+            <hr className="mb-6 border-slate-700"></hr>
             {/* Grid Wrapper */}
             <div className="grid grid-cols-1 md:grid-cols-2 items-center">
                 <img src={AboutHeadshot} className="mx-auto max-w-sm"></img>
