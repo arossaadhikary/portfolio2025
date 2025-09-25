@@ -9,10 +9,9 @@ const About = () => {
             <div className="grid grid-cols-1 md:grid-cols-2 items-center">
                 <img src={AboutHeadshot} className="mx-auto max-w-sm"></img>
                 <div className="text-left text-lg text-slate-300 leading-relaxed">
-                    <p >
+                    <p className="mb-10">
                         My name is Arossa - I'm an ambitious, goal-oriented, 3nd-year undergraduate honors student at the University of Florida (Go Gators!). 
                     </p>
-                    <br />
                     <p >
                         I strive to use my coding knowledge to make a social impact, with a specific interest in protecting design, digital infrastructure & education. I gravitate towards activities involving STEM education & mentorship, specifically for women & the youth. I'm aligning my career with artificial intelligence in the cybersecurity domain by studying for my Security+ certification (expected completion Sept 2025).                
                     </p>

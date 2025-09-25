@@ -41,10 +41,10 @@ const ProjectCard = ({ title, image, description, githubUrl, projectUrl, skills 
                 </div>
             </div>
            
-            {/* Description */}
+            {/* Description
             <p className="text-left text-slate-300 leading-relaxed line-clamp-4">
                 {description}
-            </p>
+            </p> */}
 
             {/* Skills */}
             {skills && skills.length > 0 && (

@@ -8,7 +8,7 @@ const Experiences = () => {
   const [activeTab, setActiveTab] = useState<keyof typeof experiences>("Professional")
 
   return (
-    <section id="experiences" className="px-6 py-16">
+    <section id="experiences" className="px-6 py-14">
       <h2 className="mb-6 font-bold text-white text-4xl flex text-left">EXPERIENCES</h2>
       <hr className="mb-6 border-slate-700" />
 
