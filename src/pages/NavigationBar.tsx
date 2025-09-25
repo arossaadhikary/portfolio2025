@@ -13,7 +13,7 @@ const NavigationBar = () => {
                 <a href="#about"><li>About</li></a>
                 <a href="#projects"><li>Projects</li></a>
                 <a href="#experiences"><li>Experiences</li></a>
-                <a href="#contact"><li>Contact</li></a>
+                <a href="#connect"><li>Connect</li></a>
             </ul>
 
             {/* Social Icons */}

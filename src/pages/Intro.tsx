@@ -22,10 +22,10 @@ const Intro = () => {
             </p>
             <div className="mt-10 flex justify-start gap-5 font-semibold">
               <a
-                href="#contact"
+                href="#connect"
                 className="rounded-full border-2 bg-white text-[#0a192f] px-10 py-3"
               >
-                Hire Me
+                Let's Connect
               </a>
               <a
                 href={Resume}
