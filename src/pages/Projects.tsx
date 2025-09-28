@@ -18,7 +18,7 @@ const Projects = () => {
 
   return (
     <div id="projects">
-      <h2 className="flex justify-start text-white text-4xl font-bold mb-6 mt-10">PROJECTS</h2>
+      <h2 className="flex justify-start text-white text-4xl font-bold mb-6 mt-10 sm:mt-0">PROJECTS</h2>
       <hr className="mb-6 border-slate-700" />
 
       <h2 className="text-left sm:text-lg md:text-lg text-slate-300">
