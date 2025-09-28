@@ -1,6 +1,5 @@
 import Email from '../assets/icon-email.png'
 import LinkedIn from '../assets/icon-linkedin.png'
-import Calendar from '../assets/icon-calendar.png'
 import Youtube from "../assets/icon-youtube.png"
 import GitHub from '../assets/icon-github.png'
 

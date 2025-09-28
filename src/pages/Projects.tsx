@@ -3,10 +3,11 @@ import { motion, AnimatePresence } from "framer-motion";
 import ProjectCard from "../components/Projects/ProjectCard";
 import ProjectModal from "../components/Projects/ProjectModal";
 import { projects } from "../data/projects";
+import type { Project } from "../types/Project";
 
 const Projects = () => {
   const [currentPage, setCurrentPage] = useState(1);
-  const [selectedProject, setSelectedProject] = useState(null);
+  const [selectedProject, setSelectedProject] = useState<Project | null>(null);
 
   const projectsPerPage = 3;
   const indexOfLastProject = currentPage * projectsPerPage;

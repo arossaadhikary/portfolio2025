@@ -1,20 +1,13 @@
-// components/Projects/ProjectModal.tsx
 import { motion } from "framer-motion";
 import Skill from "./SkillButton";
 import GitHub from "../../assets/icon-github.png";
 import Output from "../../assets/icon-output.png";
+import type { Project } from "../../types/Project";
 
 type ProjectModalProps = {
   isOpen: boolean;
   onClose: () => void;
-  project: {
-    title: string;
-    image: string;
-    description: string;
-    githubUrl?: string;
-    projectUrl?: string;
-    skills: string[];
-  } | null;
+  project: Project | null;
 };
 
 const ProjectModal = ({ isOpen, onClose, project }: ProjectModalProps) => {
@@ -43,7 +36,7 @@ const ProjectModal = ({ isOpen, onClose, project }: ProjectModalProps) => {
 
         {/* Two-column layout */}
         <div className="grid grid-cols-1 md:grid-cols-2 gap-10 items-center pt-6">
-          {/* Left side: Title + description + skills */}
+          {/* Left side */}
           <div className="flex flex-col justify-center">
             <h2 className="text-xl md:text-3xl font-bold mb-4 text-left">
               {project.title}
@@ -60,9 +53,8 @@ const ProjectModal = ({ isOpen, onClose, project }: ProjectModalProps) => {
             )}
           </div>
 
-          {/* Right side: Image + icons */}
+          {/* Right side */}
           <div className="flex flex-col justify-center">
-            {/* Image centered */}
             <div className="flex justify-center">
               <img
                 src={project.image}
@@ -70,33 +62,15 @@ const ProjectModal = ({ isOpen, onClose, project }: ProjectModalProps) => {
                 className="rounded-xl mb-4 max-w-full"
               />
             </div>
-
-            {/* Icons aligned to right edge of image */}
             <div className="flex justify-end gap-6">
               {project.githubUrl && (
-                <a
-                  href={project.githubUrl}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
-                  <img
-                    src={GitHub}
-                    alt="GitHub"
-                    className="h-7 w-7 hover:scale-110 transition-transform duration-200"
-                  />
+                <a href={project.githubUrl} target="_blank" rel="noopener noreferrer">
+                  <img src={GitHub} alt="GitHub" className="h-7 w-7 hover:scale-110 transition-transform duration-200"/>
                 </a>
               )}
               {project.projectUrl && (
-                <a
-                  href={project.projectUrl}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
-                  <img
-                    src={Output}
-                    alt="Output"
-                    className="h-7 w-7 hover:scale-110 transition-transform duration-200"
-                  />
+                <a href={project.projectUrl} target="_blank" rel="noopener noreferrer">
+                  <img src={Output} alt="Output" className="h-7 w-7 hover:scale-110 transition-transform duration-200"/>
                 </a>
               )}
             </div>
