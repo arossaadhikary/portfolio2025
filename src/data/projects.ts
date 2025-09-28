@@ -2,7 +2,7 @@ import P_Clarfina from "../assets/preview-clarfina.png"
 import P_EWB from "../assets/preview-ewb.png"
 import P_PageTurners from "../assets/preview-pageturners.png"
 import P_WiNGHacks from "../assets/preview-winghacks.png"
-import P_Earthquake from "../assets/preview_Earthquake.png"
+import P_Earthquake from "../assets/preview_earthquake.png"
 import P_AnimalCare from "../assets/preview_animalcare.png"
 import P_YoutubeChannel from "../assets/preview_youtubechannel.png"
 
