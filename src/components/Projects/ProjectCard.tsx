@@ -11,12 +11,14 @@ const ProjectCard = ({ title, image, githubUrl, projectUrl, skills, onImageClick
   return (
     <section>
       {/* Image (clickable) */}
-      <img 
-        src={image} 
-        alt={title}
-        className="rounded-3xl cursor-pointer hover:opacity-80 transition" 
-        onClick={onImageClick} 
-      />
+      <div className="w-full h-48 overflow-hidden rounded-3xl">
+        <img 
+          src={image} 
+          alt={title}
+          className="w-full h-full object-cover cursor-pointer hover:opacity-80 transition" 
+          onClick={onImageClick} 
+        />
+      </div>
 
       {/* Title + icons */}
       <div className="flex items-start justify-between my-4">

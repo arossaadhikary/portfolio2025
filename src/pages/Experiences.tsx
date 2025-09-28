@@ -15,7 +15,7 @@ const Experiences = () => {
   return (
     <section id="experiences" className="px-4 sm:px-6 py-10 sm:py-14">
       {/* Heading */}
-      <h2 className="mb-4 mt-10 font-bold text-white text-3xl sm:text-4xl text-left">
+      <h2 className="mb-4 font-bold text-white text-3xl sm:text-4xl text-left">
         EXPERIENCES
       </h2>
       <hr className="mb-6 border-slate-700" />
