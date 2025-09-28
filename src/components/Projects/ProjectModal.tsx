@@ -45,10 +45,10 @@ const ProjectModal = ({ isOpen, onClose, project }: ProjectModalProps) => {
         <div className="grid grid-cols-1 md:grid-cols-2 gap-10 items-center pt-6">
           {/* Left side: Title + description + skills */}
           <div className="flex flex-col justify-center">
-            <h2 className="text-3xl font-bold mb-4 text-left">
+            <h2 className="text-xl md:text-3xl font-bold mb-4 text-left">
               {project.title}
             </h2>
-            <p className="text-slate-300 leading-relaxed text-left mb-6">
+            <p className="text-slate-300 leading-relaxed text-left mb-6 text-sm md:text-base">
               {project.description}
             </p>
             {project.skills && project.skills.length > 0 && (

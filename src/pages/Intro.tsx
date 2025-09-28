@@ -1,52 +1,71 @@
+import { motion } from "framer-motion"
 import Headshot from '../assets/headshot.png'
 import Resume from '../../public/ArossaAdhikaryResume.pdf'
-import { motion } from 'framer-motion'
 
 const Intro = () => {
   return (
     <section id="intro" className="text-white">
-      <div className="mx-auto max-w-6xl px-6">
+      <div className="mx-auto max-w-6xl px-4 sm:px-6">
         {/* Grid wrapper */}
-        <div className="grid grid-cols-1 md:grid-cols-2 items-center gap-10">
+        <motion.div 
+          className="grid grid-cols-1 md:grid-cols-[3fr_2fr] items-center"
+          initial={{ opacity: 0, y: 40 }}   
+          animate={{ opacity: 1, y: 0 }}   
+          transition={{ duration: 0.8, ease: "easeOut" }}
+        >
+          {/* Image */}
+          <motion.div 
+            className="order-1 md:order-2 flex justify-center"
+            initial={{ opacity: 0, scale: 0.9 }}
+            animate={{ opacity: 1, scale: 1 }}
+            transition={{ duration: 1, delay: 0.2, ease: "easeOut" }}
+          >
+            <img
+              src={Headshot}
+              alt="Headshot"
+              className="mx-auto max-w-[200px] sm:max-w-[300px] md:max-w-md rounded-full animate-float"
+            />
+          </motion.div>
+
           {/* Text */}
-          <div className="order-2 md:order-1 text-left">
-            <h1 className="text-10xl mb-10 md:text-5xl font-extrabold flex items-center gap-3">
-              Hello - I'm Arossa 
-              <span role="img" aria-label="wave" className="animate-wave">👋</span>
+          <motion.div 
+            className="order-2 md:order-1 text-center md:text-left md:pr-8"
+            initial={{ opacity: 0, x: -50 }}
+            animate={{ opacity: 1, x: 0 }}
+            transition={{ duration: 0.9, delay: 0.3, ease: "easeOut" }}
+          >
+            <h1 className="text-3xl sm:text-4xl md:text-6xl font-extrabold mb-4 md:mb-10 flex items-center justify-center md:justify-start gap-2">
+              Hi - I'm Arossa 
+              <span role="img" aria-label="wave">👋</span> 
             </h1>
-            <h2 className="mt-2 text-2xl mb-7 text-slate-300">
+
+            <h2 className="text-base sm:text-lg md:text-2xl mb-4 text-slate-300">
               <em>Welcome to my developer journey.</em>
             </h2>
-            <p className="mt-4 text-xl text-slate-300 leading-relaxed">
-              I'm a passionate developer from Tampa, FL. I enjoy creating web/IOS applications & expanding into the cybersecurity sphere. I have experience with Python, Javascript, & C++.
+
+            <p className="sm:text-lg md:text-xl text-slate-300 leading-relaxed mx-auto md:mx-0 md:pb-8">
+              I'm a passionate developer from Tampa, FL. I enjoy creating web/IOS applications & expanding into the cybersecurity sphere. 
+              I have experience with Python, Javascript, & C++.
             </p>
-            <div className="mt-10 flex justify-start gap-5 font-semibold">
+
+            <div className="mt-6 flex flex-col sm:flex-row justify-center md:justify-start gap-4 font-semibold mb-8">
               <a
                 href="#connect"
-                className="rounded-full border-2 bg-white text-[#0a192f] px-10 py-3"
+                className="rounded-full border-2 bg-white text-[#0a192f] px-6 py-2 sm:px-8 sm:py-3 text-sm sm:text-base"
               >
                 Let's Connect
               </a>
               <a
                 href={Resume}
                 download
-                className="rounded-full border-2 border-white px-10 py-3 
+                className="rounded-full border-2 border-white px-6 py-2 sm:px-8 sm:py-3 text-sm sm:text-base
                 transition-all duration-500 hover:shadow-[0_0_25px_5px_rgba(34,211,238,0.8)] hover:border-blue-300"
               >
                 Download Resume
               </a>
             </div>
-          </div>
-
-          {/* Image */}
-          <div className="order-1 md:order-2 flex justify-center md:justify-end">
-            <img
-              src={Headshot}
-              alt="Headshot"
-              className="w-full max-w-lg mx-auto order-1 md:order-2"
-            />
-          </div>
-        </div>
+          </motion.div>
+        </motion.div>
       </div>
     </section>
   )

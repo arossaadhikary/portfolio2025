@@ -1,35 +1,73 @@
+import { useState } from "react"
 import Email from '../assets/icon-email.png'
 import GitHub from '../assets/icon-github.png'
 import LinkedIn from '../assets/icon-linkedin.png'
 
 const NavigationBar = () => {
-    return (
-        <nav className = "flex justify-between items-center px-8 py-4 text-white">
-            {/* @arossaadhikary*/}
-            <a href="/" className = "hover:text-blue-400 transition">@arossaadhikary</a>
+  const [menuOpen, setMenuOpen] = useState(false)
 
-            {/* Center Links */}
-            <ul className="flex space-x-8 text-xl">
-                <a href="#about"><li>About</li></a>
-                <a href="#projects"><li>Projects</li></a>
-                <a href="#experiences"><li>Experiences</li></a>
-                <a href="#connect"><li>Connect</li></a>
-            </ul>
+  return (
+    <nav className="flex justify-between items-center px-6 sm:px-8 py-4 text-white relative">
+      {/* Logo/Handle */}
+      <a href="/" className="hover:text-blue-400 transition font-semibold">
+        @arossaadhikary
+      </a>
 
-            {/* Social Icons */}
-            <div className="flex space-x-6">
-                <a href="https://www.linkedin.com/in/arossaadhikary/" target="_blank"><img src={LinkedIn} alt="LinkedIn" className="h-6 w-6 hover:opacity-70 transition"/></a>
-                <a href="https://github.com/arossaadhikary" target="_blank"><img src={GitHub} alt="GitHub" className="h-6 w-6 hover:opacity-70 transition"/></a>
-                <a href="mailto:arossa.adhikaryc@gmail.com"><img src={Email} alt="Email" className="h-6 w-6 hover:opacity-70 transition"/></a>
-            </div>
-        </nav>
-    )
+      {/* Desktop Links */}
+      <ul className="hidden md:flex space-x-8 text-lg">
+        <a href="#about"><li>About</li></a>
+        <a href="#projects"><li>Projects</li></a>
+        <a href="#experiences"><li>Experiences</li></a>
+        <a href="#connect"><li>Connect</li></a>
+      </ul>
+
+      {/* Social Icons (always visible on desktop, hidden in mobile menu) */}
+      <div className="hidden md:flex space-x-6">
+        <a href="https://www.linkedin.com/in/arossaadhikary/" target="_blank">
+          <img src={LinkedIn} alt="LinkedIn" className="h-6 w-6 hover:opacity-70 transition"/>
+        </a>
+        <a href="https://github.com/arossaadhikary" target="_blank">
+          <img src={GitHub} alt="GitHub" className="h-6 w-6 hover:opacity-70 transition"/>
+        </a>
+        <a href="mailto:arossa.adhikaryc@gmail.com">
+          <img src={Email} alt="Email" className="h-6 w-6 hover:opacity-70 transition"/>
+        </a>
+      </div>
+
+      {/* Hamburger / X button (mobile only) */}
+      <button 
+        className="md:hidden focus:outline-none z-50"
+        onClick={() => setMenuOpen(!menuOpen)}
+      >
+        {menuOpen ? (
+          <span className="text-3xl">&times;</span> // X
+        ) : (
+          <span className="text-3xl">&#9776;</span> // Hamburger
+        )}
+      </button>
+
+      {/* Mobile Menu */}
+      {menuOpen && (
+        <div className="absolute top-0 left-0 w-full h-screen bg-slate-900 flex flex-col items-center justify-center space-y-8 text-2xl z-40">
+          <a href="#about" onClick={() => setMenuOpen(false)}>About</a>
+          <a href="#projects" onClick={() => setMenuOpen(false)}>Projects</a>
+          <a href="#experiences" onClick={() => setMenuOpen(false)}>Experiences</a>
+          <a href="#connect" onClick={() => setMenuOpen(false)}>Connect</a>
+          <div className="flex space-x-6 pt-6">
+            <a href="https://www.linkedin.com/in/arossaadhikary/" target="_blank">
+              <img src={LinkedIn} alt="LinkedIn" className="h-8 w-8 hover:opacity-70 transition"/>
+            </a>
+            <a href="https://github.com/arossaadhikary" target="_blank">
+              <img src={GitHub} alt="GitHub" className="h-8 w-8 hover:opacity-70 transition"/>
+            </a>
+            <a href="mailto:arossa.adhikaryc@gmail.com">
+              <img src={Email} alt="Email" className="h-8 w-8 hover:opacity-70 transition"/>
+            </a>
+          </div>
+        </div>
+      )}
+    </nav>
+  )
 }
 
 export default NavigationBar
-
-{/*
-px-8 = horizontal padding
-py-4 = vertical padding
-space-x-8 = horizontal spacing between items
-*/}
