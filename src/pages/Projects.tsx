@@ -1,12 +1,14 @@
-import { useState } from "react"
-import { motion, AnimatePresence } from "framer-motion"
-import ProjectCard from "../components/Projects/ProjectCard"
-import { projects } from "../data/projects"
+import { useState } from "react";
+import { motion, AnimatePresence } from "framer-motion";
+import ProjectCard from "../components/Projects/ProjectCard";
+import ProjectModal from "../components/Projects/ProjectModal";
+import { projects } from "../data/projects";
 
 const Projects = () => {
   const [currentPage, setCurrentPage] = useState(1);
-  const projectsPerPage = 3;
+  const [selectedProject, setSelectedProject] = useState(null);
 
+  const projectsPerPage = 3;
   const indexOfLastProject = currentPage * projectsPerPage;
   const indexOfFirstProject = indexOfLastProject - projectsPerPage;
   const currentProjects = projects.slice(indexOfFirstProject, indexOfLastProject);
@@ -16,9 +18,9 @@ const Projects = () => {
   return (
     <div id="projects">
       <h2 className="flex justify-start text-white text-4xl font-bold mb-6">PROJECTS</h2>
-      <hr className="mb-6 border-slate-700"></hr>
+      <hr className="mb-6 border-slate-700" />
 
-      {/* Projects Grid with animation */}
+      {/* Projects Grid */}
       <div className="my-10">
         <AnimatePresence mode="wait">
           <motion.div
@@ -30,7 +32,11 @@ const Projects = () => {
             className="grid grid-cols-1 md:grid-cols-3 gap-10"
           >
             {currentProjects.map((p, i) => (
-              <ProjectCard key={i} {...p} />
+              <ProjectCard 
+                key={i} 
+                {...p} 
+                onImageClick={() => setSelectedProject(p)} 
+              />
             ))}
           </motion.div>
         </AnimatePresence>
@@ -59,7 +65,7 @@ const Projects = () => {
             {i + 1}
           </button>
         ))}
-
+        
         <button
           disabled={currentPage === totalPages}
           onClick={() => setCurrentPage(prev => prev + 1)}
@@ -68,8 +74,19 @@ const Projects = () => {
           &gt;
         </button>
       </div>
-    </div>
-  )
-}
 
-export default Projects
+      {/* Modal */}
+      <AnimatePresence>
+        {selectedProject && (
+          <ProjectModal
+            isOpen={!!selectedProject}
+            onClose={() => setSelectedProject(null)}
+            project={selectedProject}
+          />
+        )}
+      </AnimatePresence>
+    </div>
+  );
+};
+
+export default Projects;

@@ -16,7 +16,7 @@ const Contact = () => {
 
             <div className="flex justify-center space-x-8 mt-3">
                 <a href="mailto:arossa.adhikaryc@gmail.com"><img src={Email} alt="Email" className="h-10 w-10 mt-6 mb-4 mx-auto hover:opacity-70 transition"/></a>
-                <img src={Youtube} alt="Youtube" className="h-10 w-10 mt-6 mb-4 mx-auto hover:opacity-70 transition"/>
+                <a href="https://www.youtube.com/@arossa" target="_blank"><img src={Youtube} alt="Youtube" className="h-10 w-10 mt-6 mb-4 mx-auto hover:opacity-70 transition"/></a>
                 <a href="https://www.linkedin.com/in/arossaadhikary/" target="_blank"><img src={LinkedIn} alt="LinkedIn" className="h-10 w-10 mt-6 mb-4 mx-auto hover:opacity-70 transition"/></a>
                 <a href="https://github.com/arossaadhikary" target="_blank"><img src={GitHub} alt="GitHub" className="h-10 w-10 mt-6 mb-4 mx-auto hover:opacity-70 transition"/></a>
             </div>
