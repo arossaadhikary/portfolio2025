@@ -12,7 +12,7 @@ const Contact = () => {
         <hr className="mb-6 border-slate-700" />
 
         <h2 className="text-base sm:text-lg md:text-xl text-slate-300 text-center mb-6">
-        Say{" "}
+        Say
         <span role="img" aria-label="wave" className="inline-block animate-wave origin-bottom-right">
             👋
         </span>
